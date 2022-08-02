@@ -9,6 +9,12 @@
 - Please make sure u use the latest dependencies aswell as core for this in order to work.
 
 
+## Discord
+https://discord.gg/PkJGQ6EdZp
+
+## Preview
+https://youtu.be/JNSSe42hU-4
+
 ## Dependencies :
 
 QBCore Framework - https://github.com/qbcore-framework/qb-core
