@@ -92,7 +92,7 @@ QBShared.Jobs = {
 		options = {
 			{
 				type = "client",
-				event = "garage:ChickenFactoryGarage",
+				event = "garage:chickenfactorygarage",
 				icon = "far fa-clipboard",
 				label = "ChickenFactory Garage",
 				job = "chickenfactory",
