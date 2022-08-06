@@ -56,7 +56,7 @@ AddEventHandler("qb-chickenfactory:deliveries:ReceivePayment", function()
 					flags = 8,
 				}, {}, {}, function() -- Done
 					TriggerServerEvent('qb-chickenfactory:server:ReceivePayment')
-					TriggerServerEvent('QBCore:Server:RemoveItem', "customer-receipt", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "receipt", 1)
 							QBCore.Functions.Notify("You Filed a Receipt", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
