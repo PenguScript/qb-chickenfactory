@@ -72,7 +72,7 @@ RegisterNetEvent('qb-chickenfactory:server:KnockDoor', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local item1 = 'eggs'
-    local item2 = 'customer-receipt'
+    local item2 = 'receipt'
     local quantity1 = 12
     local quantity2 = 1
 
