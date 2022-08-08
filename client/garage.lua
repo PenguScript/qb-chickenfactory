@@ -65,8 +65,8 @@ function loadAnimDict(dict)
 end
 
 RegisterNetEvent('qb-chickenfactory:garage')
-AddEventHandler('qb-chickenfactory:garage', function(ws)
-    local vehicle = ws.vehicle
+AddEventHandler('qb-chickenfactory:garage', function(chick)
+    local vehicle = chick.vehicle
     local coords = vector4(-75.69, 6275.03, 31.4, 41.24)
         QBCore.Functions.GetPlayerData(function(PlayerData)
         PlayerJob = PlayerData.job
