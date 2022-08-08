@@ -83,7 +83,7 @@ end)
 QBCore.Functions.CreateCallback('qb-chickenfactory:server:get:ReceiptChecker', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local wreceipt = Ply.Functions.GetItemByName("customer-receipt")
+    local wreceipt = Ply.Functions.GetItemByName("receipt")
     if wreceipt ~= nil then
         cb(true)
     else
@@ -96,6 +96,6 @@ RegisterNetEvent('qb-chickenfactory:server:ReceivePayment', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local payment = Config.DeliveryPayment
 
-    Player.Functions.RemoveItem('customer-receipt', 1)
+    Player.Functions.RemoveItem('receipt', 1)
     Player.Functions.AddMoney('bank', payment)
 end)
