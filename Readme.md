@@ -82,23 +82,3 @@ QBShared.Jobs = {
         vector3(-67.53, 6254.06, 30.09),
     },
 ```
-
-## Insert the following into @qb-target - init.lua - config.targetmodels
-``` 
-["chickenfactorygarage"] = {
-		models = {
-			"s_m_y_factory_01"
-		},
-		options = {
-			{
-				type = "client",
-				event = "garage:chickenfactorygarage",
-				icon = "far fa-clipboard",
-				label = "ChickenFactory Garage",
-				job = "chickenfactory",
-			}
-		},
-		distance = 2.5,
-	},
-
-```
