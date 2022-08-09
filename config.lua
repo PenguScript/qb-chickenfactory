@@ -1,5 +1,5 @@
 print"qb-chickenfactory made by Pengu Scripts"
-print"version 1.0"
+print"version 1.2"
 
 
 Config = {}
