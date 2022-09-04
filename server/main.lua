@@ -46,14 +46,54 @@ QBCore.Functions.CreateCallback('qb-chickenfactory:server:get:ingredientchickenn
 end)
 
 
-
+----------ITEMS----------------
 
 QBCore.Functions.CreateUseableItem("chickennugget", function(source, item)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("qb-chickenfactory:use-nugget", src, item.name)
-    end
+    TriggerClientEvent("qb-chickenfactory:use-nugget", src, item.name)
+    Player.Functions.RemoveItem("chickennugget", 1)
+end)
+
+RegisterNetEvent('qb-chickenfactory:server:RemoveDirtyChicken', function()
+    local src = source
+    local plr = QBCore.Functions.GetPlayer(src)
+	plr.Functions.RemoveItem('dirtychicken', 1)
+end)
+RegisterNetEvent('qb-chickenfactory:server:AddCleanChicken', function()
+    local src = source
+    local plr = QBCore.Functions.GetPlayer(src)
+	plr.Functions.AddItem('cleanchicken', 1)
+end)
+RegisterNetEvent('qb-chickenfactory:server:AddGroundChicken', function()
+    local src = source
+    local plr = QBCore.Functions.GetPlayer(src)
+	plr.Functions.AddItem('groundchicken', 2)
+end)
+RegisterNetEvent('qb-chickenfactory:server:RemoveCleanChicken', function()
+    local src = source
+    local plr = QBCore.Functions.GetPlayer(src)
+	plr.Functions.RemoveItem('groundchicken', 1)
+end)
+RegisterNetEvent('qb-chickenfactory:server:RemoveBreadCrumbs', function()
+    local src = source
+    local plr = QBCore.Functions.GetPlayer(src)
+	plr.Functions.RemoveItem('breadcrumbs', 1)
+end)
+RegisterNetEvent('qb-chickenfactory:server:RemoveGroundChicken', function()
+    local src = source
+    local plr = QBCore.Functions.GetPlayer(src)
+	plr.Functions.RemoveItem('groundchicken', 1)
+end)
+RegisterNetEvent('qb-chickenfactory:server:AddChickenNugget', function()
+    local src = source
+    local plr = QBCore.Functions.GetPlayer(src)
+	local math = math.random(1,2)
+	if math == 1 then
+		plr.Functions.AddItem('chickennugget', 6)
+	elseif math == 2 then
+		plr.Functions.AddItem('chickennugget', 12)
+	end
 end)
 
 ----------DELIVERY STUFF----------------
