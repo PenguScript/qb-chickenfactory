@@ -120,12 +120,12 @@ AddEventHandler("qb-chickenfactory:chickennugget", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:AddItem', "chickennugget", math.random(6, 12))
+					TriggerServerEvent('qb-chickenfactory:server:AddChickenNugget')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["chickennugget"], "add")
                    			QBCore.Functions.Notify("You made a chicken nugget", "success")
-                    TriggerServerEvent('QBCore:Server:RemoveItem', "breadcrumbs", 1)
+                    TriggerServerEvent('qb-chickenfactory:server:RemoveBreadCrumbs')
                                 TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["breadcrumbs"], "remove")
-                    TriggerServerEvent('QBCore:Server:RemoveItem', "groundchicken", 1)
+                    TriggerServerEvent('qb-chickenfactory:server:RemoveGroundChicken')
                                 TriggerEvent("inventory:cleint:ItemBox", QBCore.Shared.Items["groundchicken"], "remove")
 				end, function()
 					QBCore.Functions.Notify("You Stopped", "error")
@@ -173,7 +173,7 @@ end)
 
 -- Functions --
 function GrindChicken()
-	TriggerServerEvent('QBCore:Server:RemoveItem', "cleanchicken", 1)
+	TriggerServerEvent('qb-chickenfactory:server:RemoveCleanChicken')
 	QBCore.Functions.Progressbar("pickup", "Grinding the Clean Chicken..", 4000, false, true, {
 	    disableMovement = true,
 	    disableCarMovement = true,
@@ -186,14 +186,14 @@ function GrindChicken()
 	    }
 	)
 	Citizen.Wait(4000)
-	TriggerServerEvent('QBCore:Server:AddItem', "groundchicken", 2)
+	TriggerServerEvent('qb-chickenfactory:server:AddGroundChicken')
 	TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["groundchicken"], "add")
 	QBCore.Functions.Notify("You Ground The Chicken", "success")
 	StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
 end
 
 function CleanChicken()
-    TriggerServerEvent('QBCore:Server:RemoveItem', "dirtychicken", 1)
+    TriggerServerEvent('qb-chickenfactory:server:RemoveDirtyChicken')
     QBCore.Functions.Progressbar("pickup", "Cleaning the chicken..", 4000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -206,7 +206,7 @@ function CleanChicken()
     }    
 )
     Citizen.Wait(4000)
-    TriggerServerEvent('QBCore:Server:AddItem', "cleanchicken", 1)
+    TriggerServerEvent('qb-chickenfactory:server:AddCleanChicken)
     TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["cleanchicken"], "add")
     QBCore.Functions.Notify("You cleaned the chicken", "success")
     StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
