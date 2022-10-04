@@ -206,7 +206,7 @@ function CleanChicken()
     }    
 )
     Citizen.Wait(4000)
-    TriggerServerEvent('qb-chickenfactory:server:AddCleanChicken)
+    TriggerServerEvent('qb-chickenfactory:server:AddCleanChicken')
     TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["cleanchicken"], "add")
     QBCore.Functions.Notify("You cleaned the chicken", "success")
     StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
