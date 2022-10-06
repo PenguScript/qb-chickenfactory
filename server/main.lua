@@ -73,7 +73,7 @@ end)
 RegisterNetEvent('qb-chickenfactory:server:RemoveCleanChicken', function()
     local src = source
     local plr = QBCore.Functions.GetPlayer(src)
-	plr.Functions.RemoveItem('groundchicken', 1)
+	plr.Functions.RemoveItem('cleanchicken', 1)
 end)
 RegisterNetEvent('qb-chickenfactory:server:RemoveBreadCrumbs', function()
     local src = source
