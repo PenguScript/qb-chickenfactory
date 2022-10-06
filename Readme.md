@@ -37,7 +37,7 @@ ooSayeroo for the script of which I used as a backbone.
 ```
 QBShared.Items = {
 -- Chicken Factory Shop
-['chickennugget'] 			    	 = {['name'] = 'chickennuggets', 			    	['label'] = 'Chicken Nuggets', 		    	['weight'] = 50, 		['type'] = 'item', 		["image"] = "chickennuggets.png",       	["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Yummy Nuggies."},
+['chickennugget'] 			    	 = {['name'] = 'chickennugget', 			    	['label'] = 'Chicken Nuggets', 		    	['weight'] = 50, 		['type'] = 'item', 		["image"] = "chickennuggets.png",       	["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Yummy Nuggies."},
 ['cleanchicken'] 			    	 = {['name'] = 'cleanchicken', 			        	['label'] = 'Clean Chicken', 		    	['weight'] = 200, 		['type'] = 'item', 		["image"] = "cleanchicken.png",           	["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Sparkling Clean Chicken."},
 ['groundchicken'] 				     = {['name'] = 'groundchicken', 			        ['label'] = 'Ground Chicken', 		     	['weight'] = 200, 		['type'] = 'item', 		['image'] = 'groundchicken.png',        	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'I Just Ground Up My Own Chicken!'},
 ['dirtychicken'] 		 	 	 	 = {['name'] = 'dirtychicken',           			['label'] = 'Dirty Chicken',	 	    	['weight'] = 200, 		['type'] = 'item', 		["image"] = "dirtychicken.png", 		    ["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "This Smells HORRIBLE!"},
