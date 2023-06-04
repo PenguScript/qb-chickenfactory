@@ -10,7 +10,7 @@
 
 
 ## Discord
-https://discord.gg/PkJGQ6EdZp
+https://dsc.gg/penguscripts
 
 ## Preview
 https://youtu.be/JNSSe42hU-4
