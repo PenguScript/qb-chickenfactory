@@ -7,7 +7,7 @@ local onDuty = true
 
 -- target
 
-Citizen.CreateThread(function()
+CreateThread(function()
 	exports['qb-target']:AddBoxZone("ChickenFactoryDuty", vector3(-70.16, 6256.38, 35.11), 0.50, 0.30, {
 		name = "ChickenFactoryDuty",
 		heading = 220.88,
