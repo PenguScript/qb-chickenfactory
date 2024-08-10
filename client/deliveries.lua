@@ -5,7 +5,7 @@ PlayerJob = {}
 
 RegisterNetEvent('qb-chickenfactory:deliveries:DeliverEggs', function()
     TriggerEvent('animations:client:EmoteCommandStart', {"type"})
-    QBCore.Functions.Progressbar('falar_empregada', 'Getting Delivery...', 5000, false, true, {
+    QBCore.Functions.Progressbar('gettingDelivery', 'Getting Delivery...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -28,7 +28,7 @@ end)
 
 RegisterNetEvent('qb-chickenfactory:deliveries:KnockDoor', function()
     TriggerEvent('animations:client:EmoteCommandStart', {"knock"})
-    QBCore.Functions.Progressbar('falar_empregada', 'Knocking Door...', 5000, false, true, {
+    QBCore.Functions.Progressbar('knockingDoor', 'Knocking Door...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -45,7 +45,7 @@ AddEventHandler("qb-chickenfactory:deliveries:ReceivePayment", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-chickenfactory:server:get:ReceiptChecker', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Filing Receipt..", 4000, false, true, {
+				QBCore.Functions.Progressbar("filingReceipt", "Filing Receipt..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
