@@ -18,7 +18,7 @@ function DrawText3Ds(x, y, z, text)
     ClearDrawOrigin()
 end
 
-Citizen.CreateThread(function()
+CreateThread(function()
     ChickenFactory = AddBlipForCoord(-71.64, 6267.1, 30.22)
     SetBlipSprite (ChickenFactory, 89)
     SetBlipDisplay(ChickenFactory, 4)
@@ -110,7 +110,7 @@ AddEventHandler("qb-chickenfactory:chickennugget", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-chickenfactory:server:get:ingredientchickennugget', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making a chicken nugget", 4000, false, true, {
+				QBCore.Functions.Progressbar("chickenNugget", "Making a chicken nugget", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -174,7 +174,7 @@ end)
 -- Functions --
 function GrindChicken()
 	TriggerServerEvent('qb-chickenfactory:server:RemoveCleanChicken')
-	QBCore.Functions.Progressbar("pickup", "Grinding the Clean Chicken..", 4000, false, true, {
+	QBCore.Functions.Progressbar("grindingChicken", "Grinding the Clean Chicken..", 4000, false, true, {
 	    disableMovement = true,
 	    disableCarMovement = true,
 	    disableMouse = false,
