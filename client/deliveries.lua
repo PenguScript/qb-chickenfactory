@@ -40,8 +40,7 @@ RegisterNetEvent('qb-chickenfactory:deliveries:KnockDoor', function()
     end)
 end)
 
-RegisterNetEvent("qb-chickenfactory:deliveries:ReceivePayment")
-AddEventHandler("qb-chickenfactory:deliveries:ReceivePayment", function()
+RegisterNetEvent("qb-chickenfactory:deliveries:ReceivePayment", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-chickenfactory:server:get:ReceiptChecker', function(HasItems)  
     		if HasItems then
