@@ -1,8 +1,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 
-RegisterServerEvent("qb-chickenfactory:bill:player")
-AddEventHandler("qb-chickenfactory:bill:player", function(playerId, amount)
+RegisterNetEvent("qb-chickenfactory:bill:player", function(playerId, amount)
         local biller = QBCore.Functions.GetPlayer(source)
         local billed = QBCore.Functions.GetPlayer(tonumber(playerId))
         local amount = tonumber(amount)
