@@ -265,8 +265,7 @@ end)
 
 
 -- Till Stuff --
-RegisterNetEvent("qb-chickenfactory:bill")
-AddEventHandler("qb-chickenfactory:bill", function()
+RegisterNetEvent("qb-chickenfactory:bill", function()
     local bill = exports['qb-input']:ShowInput({
         header = "Create Receipt",
 		submitText = "Bill",
