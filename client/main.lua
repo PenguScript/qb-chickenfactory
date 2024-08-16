@@ -30,9 +30,7 @@ CreateThread(function()
     EndTextCommandSetBlipName(ChickenFactory)
 end) 
 
-
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
-AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     QBCore.Functions.GetPlayerData(function(PlayerData)
         PlayerJob = PlayerData.job
         if PlayerData.job.onduty then
@@ -43,24 +41,20 @@ AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     end)
 end)
 
-RegisterNetEvent('QBCore:Client:OnJobUpdate')
-AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
+RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
     PlayerJob = JobInfo
     onDuty = PlayerJob.onduty
 end)
 
-RegisterNetEvent('QBCore:Client:SetDuty')
-AddEventHandler('QBCore:Client:SetDuty', function(duty)
+RegisterNetEvent('QBCore:Client:SetDuty', function(duty)
 	onDuty = duty
 end)
 
-RegisterNetEvent("qb-chickenfactory:DutyB")
-AddEventHandler("qb-chickenfactory:DutyB", function()
+RegisterNetEvent("qb-chickenfactory:DutyB", function()
     TriggerServerEvent("QBCore:ToggleDuty")
 end)
 
-RegisterNetEvent("qb-chickenfactory:Tray1")
-AddEventHandler("qb-chickenfactory:Tray1", function()
+RegisterNetEvent("qb-chickenfactory:Tray1", function()
     TriggerEvent("inventory:client:SetCurrentStash", "chickentray1")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "chickentray1", {
         maxweight = 10000,
@@ -68,8 +62,7 @@ AddEventHandler("qb-chickenfactory:Tray1", function()
     })
 end)
 
-RegisterNetEvent("qb-chickenfactory:Tray4")
-AddEventHandler("qb-chickenfactory:Tray4", function()
+RegisterNetEvent("qb-chickenfactory:Tray4", function()
     TriggerEvent("inventory:client:SetCurrentStash", "chickentray4")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "chickentray4", {
         maxweight = 10000,
@@ -77,8 +70,7 @@ AddEventHandler("qb-chickenfactory:Tray4", function()
     })
 end)
 
-RegisterNetEvent("qb-chickenfactory:Tray3")
-AddEventHandler("qb-chickenfactory:Tray3", function()
+RegisterNetEvent("qb-chickenfactory:Tray3", function()
     TriggerEvent("inventory:client:SetCurrentStash", "chickentray3")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "chickentray3", {
         maxweight = 10000,
@@ -86,8 +78,7 @@ AddEventHandler("qb-chickenfactory:Tray3", function()
     })
 end)
 
-RegisterNetEvent("qb-chickenfactory:Storage")
-AddEventHandler("qb-chickenfactory:Storage", function()
+RegisterNetEvent("qb-chickenfactory:Storage", function()
     TriggerEvent("inventory:client:SetCurrentStash", "chickenstorage")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "chickenstorage", {
         maxweight = 250000,
@@ -95,8 +86,7 @@ AddEventHandler("qb-chickenfactory:Storage", function()
     })
 end)
 
-RegisterNetEvent("qb-chickenfactory:Storage2")
-AddEventHandler("qb-chickenfactory:Storage2", function()
+RegisterNetEvent("qb-chickenfactory:Storage2", function()
     TriggerEvent("inventory:client:SetCurrentStash", "chickenstorage2")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "chickenstorage2", {
         maxweight = 250000,
@@ -105,8 +95,7 @@ AddEventHandler("qb-chickenfactory:Storage2", function()
 end)
 
 --Chicken Creations
-RegisterNetEvent("qb-chickenfactory:chickennugget")
-AddEventHandler("qb-chickenfactory:chickennugget", function()
+RegisterNetEvent("qb-chickenfactory:chickennugget", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-chickenfactory:server:get:ingredientchickennugget', function(HasItems)  
     		if HasItems then
@@ -140,8 +129,7 @@ AddEventHandler("qb-chickenfactory:chickennugget", function()
 end)
 
 --Ground Up Chicken
-RegisterNetEvent("qb-chickenfactory:Grind")
-AddEventHandler("qb-chickenfactory:Grind", function()
+RegisterNetEvent("qb-chickenfactory:Grind", function()
     if onDuty then
     QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
         if HasItem then
@@ -212,8 +200,7 @@ function CleanChicken()
     StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
 end
 
-RegisterNetEvent("qb-chickenfactory:shop")
-AddEventHandler("qb-chickenfactory:shop", function()
+RegisterNetEvent("qb-chickenfactory:shop", function()
     TriggerServerEvent("inventory:server:OpenInventory", "shop", "chickenfactory", Config.Items)
 end)
 
